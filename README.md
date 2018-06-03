@@ -150,3 +150,4 @@ class Sheep implements Animal {
 ## 类型定义文件 （*.d.ts）
 > 用来帮助开发者在TypeScript中使用已有的javascriptg工具包、三方js包，如：jQeury
 + 类型定义包查找下载 [http://definitelytyped.org/](http://definitelytyped.org/)
++ 工具： [https://github.com/typings/typings](https://github.com/typings/typings)
