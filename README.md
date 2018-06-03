@@ -70,4 +70,35 @@ fn.next()
         + 可被打断
         + 循环的值
         + 可用于对象、map、set、string
-        
+
+## class
++ 访问控制符：控制类的属性和方法是否能从外部访问
+    + public 默认访问控制符：在类的内部、外部都可以被访问到
+    + private 只有在类的内部被访问到
+    + protected 受保护的：可以在类的内部和子类（继承）中访问到
++ 类的constructor函数
+    + 只有在实例化的时候才会被调用，且只会被调用一次    
+    + 在constructor中必须指定访问控制符
+```ts
+//此写法没有声明name属性，所以打印不出name的值
+class Person {
+    constructor(name: string) {
+
+    }
+    eat() {
+        console.log(this.name)
+    }
+}
+var p1 = new Person('yang')
+//此写法会被Person类创建一个name属性，同时把生成实例传来的参数赋值到name属性上
+class Person {
+    constructor (public name: string) {
+
+    }
+    eat() {
+        console.log(this.name)
+    }
+}
+var p1 = new Person('yang')
+
+```
