@@ -35,4 +35,39 @@ function test(a: string, b?: string, c: string='zzz') {
 test('xxx')
 ```
 
-### Rest and Spred操作符
+### Rest and Spread操作符
++ 用来什么任意数量的方法参数
+
+### Generator函数
++ 控制代码流程
++ 关键字： yield
+```js
+function* doSome() {
+    console.log('test1')
+    yield
+    console.log('test2')
+} 
+var fn  = doSome()
+fn.next()
+fn.next()
+```
+
+### 结构表达式
++ 对象
++ 数组
+
+### 箭头函数
++ 声明匿名函数，消除传统匿名函数的this指针问题
++ forEach for...in for...of
+    + forEach
+        + 循环的值
+        + 不允许打断
+        + 不允许自定义添加 arr.addValue = 'test'
+    + for...in
+        + 循环的键名
+    + for...of
+        + 忽略后添加属性
+        + 可被打断
+        + 循环的值
+        + 可用于对象、map、set、string
+        
