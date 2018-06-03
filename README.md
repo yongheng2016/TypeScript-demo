@@ -9,7 +9,7 @@
 + 类型推断：如果没有指定参数类型，会推断它的类型
 + any表示任意类型
 + void 声明方法不需要返回值；当然也可以指定它的返回值（string,number,boolean）
-+ 自定义类型： 通过class或inerface接口  
++ 自定义类型： 通过class或interface接口  
 
 ### 默认参数
 + 给方法的参数指定默认参数值,函数中默认指定了几个参数，调用的时候就要传入几个；但指定了默认值后可以不传，使用默认值；
@@ -123,4 +123,21 @@ var peoples: Array<Person> = []
 peoples[0] = new Person('li')
 peoples[1] = new Person('wang')
 peoples[2] = 2 //错误，因为指定了泛型，只能是Person类型
+```
+
+## 接口（interface）
+> 建立某种代码约定，使开发者在在调用某个方法或创建类的时候，必须遵循接口所定义的代码约定
++ interface 
+    +但你的接口用于调用一个方法的参数的类型声明
++ implements  一个类实现一个接口，必须实现接口里的所有方法、属性
+```ts
+interface Animal {
+    eat()
+}
+class Sheep implements Animal {
+    // 像这样，实现接口的eat方法
+    eat(){
+        console.log('eat')
+    }
+} 
 ```
