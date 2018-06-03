@@ -107,3 +107,20 @@ var p1 = new Person('yang')
     + 可以获得继承类的所有属性和方法
     + super: 调用父类的构造函数
         super.fn() 调用父类的其它方法，在子类的任何地方都可以调用
+
+## 泛型
+> 参数化的类型，一般用来限制集合的内容
+```ts
+class Person {
+    constructor(public name: string) {
+        super(name)
+    }
+    eat() {
+        console.log(this.name)
+    }
+}
+var peoples: Array<Person> = []
+peoples[0] = new Person('li')
+peoples[1] = new Person('wang')
+peoples[2] = 2 //错误，因为指定了泛型，只能是Person类型
+```
