@@ -102,3 +102,8 @@ class Person {
 var p1 = new Person('yang')
 
 ```
++ 类的继承
+    + 关键字： extends
+    + 可以获得继承类的所有属性和方法
+    + super: 调用父类的构造函数
+        super.fn() 调用父类的其它方法，在子类的任何地方都可以调用
